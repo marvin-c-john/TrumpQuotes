@@ -52,7 +52,7 @@ struct ContentView: View {
                     Button {
                        
                     } label: {
-                        Link(destination: URL(string: "https://twitter.com/intent/tweet?text=")!) {
+                        Link(destination: URL(string: "https://twitter.com/intent/tweet?text=\(viewModel.quote?.message ?? "")")!) {
                             Text("Tweet it!")
                                 .bold()
                                 .foregroundColor(.white)
